@@ -48,7 +48,7 @@ We provide Python scripts and Bash scripts to run the experiments no a single **
 
 **Using Python Scripts:**
 
-For example, to run the `IMAGENET → IMAGNET-C` benchmark with the `MGP` adapter, execute:
+For example, to run the long-horizon cyclic revisits experiment on ImageNet-C with the `MGP` adapter, execute:
 
 ```bash
 python test_time.py -acfg configs/adapter/imagenet/MGP.yaml -dcfg configs/dataset/imagenet.yaml -ocfg configs/order/imagenet/0.yaml SEED 0
