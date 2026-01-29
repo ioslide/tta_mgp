@@ -240,7 +240,6 @@ class RobustMGP(nn.Module):
         self.class_probs_ema = torch.ones(self.num_classes).cuda() / self.num_classes
         self.batch_size = cfg.TEST.BATCH_SIZE
         
-        # ============ Loss Type Selection ============
         self.loss_type = getattr(cfg.ADAPTER.MGP, 'LOSS_TYPE', 'default')
         log.info(f"Using loss type: {self.loss_type}")
         
