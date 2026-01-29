@@ -1,0 +1,10 @@
+
+ADAPTER:
+  NAME: ViDA
+  ViDA:
+    ViDALR: 2e-07
+    MT: 0.999
+    MT_ViDA: 0.8
+    RANK1: 4 
+    RANK2: 64 
+    UNC_THR: 0.2

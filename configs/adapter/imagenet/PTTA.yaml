@@ -1,0 +1,9 @@
+
+ADAPTER:
+  NAME: PTTA
+  PTTA:
+    e_margin: 2.76
+    d_margin: 0.05 
+    loss2_weight: 3.0  
+    queue_size: 1000 
+    neighbor: 1

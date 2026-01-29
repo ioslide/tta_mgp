@@ -1,0 +1,11 @@
+MODEL:
+  ARCH: resnet50
+  PROJECTION:
+    EMB_DIM: 2048
+  
+INPUT:
+  SIZE: (224, 224)
+  
+CORRUPTION:
+  DATASET: imagenet_r
+  NUM_CLASS: 1000

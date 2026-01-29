@@ -1,0 +1,8 @@
+
+ADAPTER:
+  NAME: TRIBE
+  TRIBE:
+    ETA: 0.5 
+    GAMMA: 0.5
+    H0: 0.4
+    LAMBDA: 0.5

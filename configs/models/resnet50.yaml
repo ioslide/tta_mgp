@@ -1,0 +1,4 @@
+MODEL:
+  ARCH: resnet50
+  PROJECTION:
+    EMB_DIM: 2048

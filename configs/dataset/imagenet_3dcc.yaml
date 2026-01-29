@@ -1,0 +1,27 @@
+MODEL:
+  ARCH: resnet50
+  PROJECTION:
+    EMB_DIM: 2048
+    
+INPUT:
+  SIZE: (224, 224)
+
+CORRUPTION:
+  DATASET: imagenet_3dcc
+  NUM_CLASS: 1000
+  NUM_EX: 5000
+  SEVERITY:
+    - 5
+  TYPE:
+    - near_focus
+    - far_focus
+    - bit_error
+    - color_quant
+    - flash
+    - fog_3d
+    - h265_abr
+    - h265_crf
+    - iso_noise
+    - low_light
+    - xy_motion_blur
+    - z_motion_blur

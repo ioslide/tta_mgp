@@ -1,0 +1,8 @@
+
+
+ADAPTER:
+  NAME: CoTTA
+  CoTTA:
+    RST: 0.001
+    AP: 0.1
+    MT: 0.999

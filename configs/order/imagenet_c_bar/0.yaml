@@ -1,0 +1,14 @@
+
+CORRUPTION:
+  ORDER_NUM: 0
+  TYPE:
+    - 'blue_noise'
+    - 'brownish_noise'
+    - 'caustic_refraction'
+    - 'checkerboard_cutout'
+    - 'cocentric_sine_waves'
+    - 'inverse_sparkles'
+    - 'perlin_noise'
+    - 'plasma_noise'
+    - 'single_frequency_greyscale'
+    - 'sparkles'
