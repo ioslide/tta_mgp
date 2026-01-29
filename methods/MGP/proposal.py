@@ -239,8 +239,7 @@ class RobustMGP(nn.Module):
         self.class_probs_ema = torch.ones(self.num_classes).cuda() / self.num_classes
         self.batch_size = cfg.TEST.BATCH_SIZE
         
-        self.loss_type = getattr(cfg.ADAPTER.MGP, 'LOSS_TYPE', 'default')
-        log.info(f"Using loss type: {self.loss_type}")
+        self.loss_type = cfg.ADAPTER.MGP.LOSS_TYPE
         self.collect_freq = getattr(cfg.ADAPTER.MGP, 'COLLECT_FREQ', 40)
 
         # ============ ETA Specific Parameters ============
@@ -459,5 +458,4 @@ class RobustMGP(nn.Module):
 
 
 def setup(model: nn.Module, cfg) -> RobustMGP:
-    log.info(f"Setting up RobustMGP with loss type: {getattr(cfg.ADAPTER.MGP, 'LOSS_TYPE', 'default')}")
     return RobustMGP(cfg, model)
