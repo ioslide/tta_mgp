@@ -2,7 +2,7 @@ bash_file_name=$(basename $0)
 
 DEBUG=False
 
-for dataset in "imagenet_r" "imagenet"
+for dataset in "imagenet_r"
 do
       for seed in 0
       do

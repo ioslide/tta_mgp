@@ -6,6 +6,9 @@ MODEL:
 INPUT:
   SIZE: (224, 224)
 
+OPTIM:
+  LR: 0.00025
+
 CORRUPTION:
   DATASET: imagenet_3dcc
   NUM_CLASS: 1000

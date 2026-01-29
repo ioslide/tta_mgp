@@ -9,3 +9,6 @@ INPUT:
 CORRUPTION:
   DATASET: imagenet_r
   NUM_CLASS: 1000
+
+OPTIM:
+  LR: 0.001

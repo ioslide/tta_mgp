@@ -6,6 +6,9 @@ MODEL:
 INPUT:
   SIZE: (224, 224)
   
+OPTIM:
+  LR: 0.00025
+  
 CORRUPTION:
   DATASET: imagenet_c_bar
   NUM_CLASS: 1000
