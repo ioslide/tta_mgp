@@ -232,7 +232,6 @@ class RobustMGP(nn.Module):
         
         self.batch_index = 0
         self.slow_freq = cfg.ADAPTER.MGP.DISTILL_FREQ
-        self.collect_freq = cfg.ADAPTER.MGP.MEM_COLLECT_FREQ
         self.softmax_entropy_clamp = Entropy()
         self.tta_transform = get_tta_transforms(cfg, padding_mode="reflect", cotta_augs=False)
         
@@ -242,14 +241,14 @@ class RobustMGP(nn.Module):
         
         self.loss_type = getattr(cfg.ADAPTER.MGP, 'LOSS_TYPE', 'default')
         log.info(f"Using loss type: {self.loss_type}")
-        
+        self.collect_freq = getattr(cfg.ADAPTER.MGP, 'COLLECT_FREQ', 40)
+
         # ============ ETA Specific Parameters ============
         self.current_model_probs = None
         self.e_margin = math.log(self.num_classes) * getattr(cfg.ADAPTER.ETA, 'E_MARGIN', 0.4)
         self.d_margin = getattr(cfg.ADAPTER.ETA, 'D_MARGIN', 0.05)
         self.num_samples_update_1 = 0
         self.num_samples_update_2 = 0
-        
         # ============ DeYO Specific Parameters ============
         self.reweight_ent = getattr(cfg.ADAPTER.DeYO, 'REWEIGHT_ENT', True)
         self.reweight_plpd = getattr(cfg.ADAPTER.DeYO, 'REWEIGHT_PLPD', False)
